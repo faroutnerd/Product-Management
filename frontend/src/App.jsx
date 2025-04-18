@@ -1,18 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 
-import HomePage from "./pages/HomePage";
-import CreatePage from "./pages/CreatePage";
+import HomePage from "./pages/home/HomePage";
+import CreatePage from "./pages/create/CreatePage";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/create" element={<CreatePage />} />
+          <Route path="/" element={<Layout><HomePage /></Layout>} />
+          <Route path="/create" element={<Layout><CreatePage /></Layout>} />
         </Routes>
     </>
   );
 }
 
-export default App;
+export default App;
